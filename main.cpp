@@ -1,7 +1,7 @@
 #include <iostream>
 #include <random>
 
-int randomNumber(int min, int max) {
+int randomNumber(int minimum, int maximum) {
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<int> dist(min, max);
@@ -10,9 +10,16 @@ int randomNumber(int min, int max) {
 }
 
 int main() {
-    int number = randomNumber(1, 100);
+    int a, b;
+    std::cout << "Write minimum: ";
+    std::cin >> a;
 
-    std::cout << number << std::endl;
+    std::cout << std::endl << "Write maximum: ";
+    std::cin >> b;
+
+    int number = randomNumber(a, b);
+
+    std::cout << std::endl << "Random number: " << number << std::endl;
 
     return 0;
 }

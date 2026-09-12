@@ -10,7 +10,7 @@ int randomNumber(int min, int max) {
 }
 
 int main() {
-    int number = randomNumber(1, 100);
+    int number = randomNumber(1, 500);
 
     std::cout << number << std::endl;
 
